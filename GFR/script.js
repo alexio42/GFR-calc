@@ -4,9 +4,26 @@ const CHECK = "Only give contrast when the Oncologist has documented that contra
 
 let gender, weight, age, creat, gfr;
 
+// add event listener to button and run main() when clicked.
+// const calculate = document.querySelector("#calculate");
+// calculate.addEventListener("click", function() { 
+//     main();
+// });
+
+function handleClick() {
+    
+    gender = document.ptdata["gender"].value;
+    age = document.ptdata["age"].value;
+    main();
+
+}
+
+
 
 function main() {
 
+    console.log(gender);
+    console.log(age);
     gfr = calculategfr(gender, weight, age, creat);
    
 };

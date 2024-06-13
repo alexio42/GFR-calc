@@ -17,19 +17,6 @@ let gender, weight, age, creat, gfr, area;
 //     main();
 // });
 
-// Get data from submitted form
-function handleClick() {
-    
-    gender = document.ptdata["gender"].value;
-    age = document.ptdata["age"].value;
-    weight = document.ptdata["weight"].value;
-    creat = document.ptdata["creat"].value;
-    area = document.ptdata["area"].value;
-    main();
-
-}
-
-
 
 function main() {
 
@@ -74,6 +61,17 @@ function main() {
 
 function calculategfr() {
     gfr = (gender * (140 - age) * weight) / creat;
-    console.log(gfr);
     return gfr;
 };
+
+// Get data from submitted form
+function handleClick() {
+    
+    gender = document.ptdata["gender"].value;
+    age = document.ptdata["age"].value;
+    weight = document.ptdata["weight"].value;
+    creat = document.ptdata["creat"].value;
+    area = document.ptdata["area"].value;
+    main();
+
+}

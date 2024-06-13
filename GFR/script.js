@@ -1,6 +1,7 @@
 const OMIT = "Scan without contrast and inform Oncologist that contrast media was not given";
 const PROCEED = "Continue with contrast";
 const CHECK = "Only give contrast when the Oncologist has documented that contrast is still necessary";
+const RESULTBOX = document.querySelector("#result");
 
 let gender, weight, age, creat, gfr;
 
@@ -10,10 +11,13 @@ let gender, weight, age, creat, gfr;
 //     main();
 // });
 
+// Get data from submitted form
 function handleClick() {
     
     gender = document.ptdata["gender"].value;
     age = document.ptdata["age"].value;
+    weight = document.ptdata["weight"].value;
+    creat = document.ptdata["creat"].value;
     main();
 
 }
@@ -22,10 +26,9 @@ function handleClick() {
 
 function main() {
 
-    console.log(gender);
-    console.log(age);
-    gfr = calculategfr(gender, weight, age, creat);
-   
+    console.log(age, gender, weight, creat);
+    gfr = calculategfr(gender, weight, age, creat).toFixed(2);
+    RESULTBOX.textContent = gfr;
 };
 
 function calculategfr() {

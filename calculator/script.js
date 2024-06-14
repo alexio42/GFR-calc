@@ -231,7 +231,3 @@ function inputNumKeyboard(key) {
           break;
     }
 }
-
-flip.addEventListener("click", function () {
-    display.classList.toggle("flipped");
-});

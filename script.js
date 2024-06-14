@@ -60,7 +60,7 @@ function main() {
 };
 
 function calculategfr() {
-    gfr = (gender * (140 - age) * weight) / creat;
+    gfr = (gender * (140 - age) * (weight * 10)) / (creat * 10);
     return gfr;
 };
 

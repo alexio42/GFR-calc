@@ -21,7 +21,7 @@ let gender, weight, age, creat, gfr, area;
 function main() {
 
     
-    gfr = calculategfr(gender, weight, age, creat).toFixed(2);
+    gfr = calculategfr(gender, weight, age, creat).toFixed(1);
     RESULT_BOX.textContent = "GFR = " + gfr;
     if (gfr >= 50) {
         INSTRUCT.textContent = PROCEED;

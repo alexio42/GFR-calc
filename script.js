@@ -27,13 +27,13 @@ function main() {
         INSTRUCT.textContent = PROCEED;
         INSTRUCT.setAttribute("style", "background-color:green; color:white;");
     }
-    else if (gfr > 45 && gfr < 50)
+    else if (gfr >= 45 && gfr < 50)
         {
             INSTRUCT.textContent = CHECK;
             INSTRUCT.setAttribute("style", "background-color:yellow;");
         }
     else if (area == LUNG_UGI) {
-        if (gfr < 45 && gfr > 40) {
+        if (gfr < 45 && gfr >= 40) {
             INSTRUCT.textContent = CHECK + " " + LEAFLET;
             INSTRUCT.setAttribute("style", "background-color:yellow;");
         }
@@ -44,7 +44,7 @@ function main() {
         }
     }
     else if (area == URO_HN) {
-        if (gfr < 45 && gfr > 30) {
+        if (gfr < 45 && gfr >= 30) {
             INSTRUCT.textContent = CHECK + " " + LEAFLET;
             INSTRUCT.setAttribute("style", "background-color:yellow;")
         }
